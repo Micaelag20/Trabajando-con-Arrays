@@ -38,6 +38,7 @@ function showList(array) {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   const stringElements = strangeArray.filter((item) => typeof item === "string");
-  stringElements.sort();
+  stringElements.sort((a, b) => a.localeCompare(b));
   showList(stringElements);
 });
+
